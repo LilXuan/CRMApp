@@ -20,4 +20,7 @@
     <string name="tipInfor">Thêm tên công ty cho Lead</string>
     <string name="quote_detail">Chi tiết báo giá</string>
     <string name="quote_information">Thông tin báo giá</string>
+    <string name="lead_creation">Tạo lead</string>
+    <string name="add_lead">Thêm lead</string>
+    <string name="add_quote">Thêm báo giá</string>
 </resources>
