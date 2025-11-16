@@ -474,7 +474,7 @@
                     android:id="@+id/thongtindiachi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/thongtindiachi"
+                    android:text="@string/address_infor"
                     android:textSize="@dimen/text_large"
                     android:textStyle="bold"
                     android:layout_marginTop="@dimen/margin_basex2"/>

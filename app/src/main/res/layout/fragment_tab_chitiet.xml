@@ -215,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="8dp"
                     android:gravity="center_vertical"
-                    android:text="@string/thongtindiachi"
+                    android:text="@string/address_infor"
                     android:textSize="@dimen/text_large"
                     android:textStyle="bold"
                     android:background="?attr/selectableItemBackground"
@@ -232,7 +232,7 @@
                     android:id="@+id/diachi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/diachi"
+                    android:text="@string/address"
                     android:textColor="@color/grey"
                     android:textSize="@dimen/text_small"
                     android:layout_marginTop="@dimen/margin_basex3"/>

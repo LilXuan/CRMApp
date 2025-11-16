@@ -28,7 +28,7 @@
                 android:id="@+id/thongtindiachi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/thongtindiachi"
+                android:text="@string/address_infor"
                 android:textSize="@dimen/text_large"
                 android:textStyle="bold"
                 android:drawablePadding="8dp"
@@ -47,7 +47,7 @@
                 android:id="@+id/layoutttdiachi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/diachi"
+                android:hint="@string/address"
                 android:background="@drawable/rounded_input_box"
                 android:layout_marginTop="@dimen/margin_basex2">
 
