@@ -1,4 +1,5 @@
 package com.example.crmmobile;
+
 public class CaNhan {
     private String hoTen;
     private String congTy;
@@ -12,6 +13,13 @@ public class CaNhan {
     private String quanLy;
 
     public CaNhan() {}
+    public CaNhan(String hoTen, String congTy, String ngaySinh, int soCuocGoi, int soMeeting) {
+        this.hoTen = hoTen;
+        this.congTy = congTy;
+        this.ngaySinh = ngaySinh;
+        this.soCuocGoi = soCuocGoi;
+        this.soMeeting = soMeeting;
+    }
 
     // Getters & Setters
     public String getHoTen() { return hoTen; }

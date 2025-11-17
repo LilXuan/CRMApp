@@ -11,9 +11,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import android.widget.ImageView;
+
 
 public class DanhSachCaNhanActivity extends AppCompatActivity {
-
+    private ImageView icBack;
     private RecyclerView rvCaNhan;
     private CaNhanAdapter adapter;
     private ArrayList<CaNhan> caNhanList;
@@ -26,18 +28,33 @@ public class DanhSachCaNhanActivity extends AppCompatActivity {
 
         rvCaNhan = findViewById(R.id.rvCaNhan);
         btnAdd = findViewById(R.id.btn_add_contact);
+        icBack = findViewById(R.id.ic_back);
 
+        // ====== Tạo danh sách ======
         caNhanList = new ArrayList<>();
-        adapter = new CaNhanAdapter(caNhanList);
 
+        // 3 item cố định
+        caNhanList.add(new CaNhan("Nguyễn Văn A", "Công ty X", "01/01/2025", 2, 2));
+        caNhanList.add(new CaNhan("Trần Thị B", "Công ty Y", "02/01/2025", 2, 2));
+        caNhanList.add(new CaNhan("Lê Văn C", "Công ty Z", "03/01/2025", 2, 2));
+
+        adapter = new CaNhanAdapter(caNhanList);
         rvCaNhan.setLayoutManager(new LinearLayoutManager(this));
         rvCaNhan.setAdapter(adapter);
 
+        // ====== Nút thêm ======
         btnAdd.setOnClickListener(v -> {
             Intent intent = new Intent(DanhSachCaNhanActivity.this, ThongTinLienHeActivity.class);
             startActivityForResult(intent, 100);
         });
 
+
+        icBack.setOnClickListener(v -> {
+            Intent intent = new Intent(DanhSachCaNhanActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
+
+        // ====== Click item ======
         adapter.setOnItemClickListener(new CaNhanAdapter.OnItemClickListener() {
             @Override
             public void onMoreClick(CaNhan cn) {
@@ -52,6 +69,7 @@ public class DanhSachCaNhanActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -73,6 +91,7 @@ public class DanhSachCaNhanActivity extends AppCompatActivity {
             cn.setSoCuocGoi(2);
             cn.setSoMeeting(2);
 
+            // Thêm item mới vào cuối danh sách
             adapter.addItem(cn);
             rvCaNhan.scrollToPosition(caNhanList.size() - 1); // cuộn xuống item mới
         }
