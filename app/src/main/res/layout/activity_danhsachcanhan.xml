@@ -15,14 +15,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btnAdd">
+        app:layout_constraintBottom_toTopOf="@id/btn_add_opportunity">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header Cá nhân -->
+            <!-- Header -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -96,17 +96,15 @@
                 android:background="@drawable/rounded_input_box"
                 android:padding="16dp">
 
-                <!-- Icon Contact -->
                 <ImageView
                     android:id="@+id/ic_contact"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_contact"
                     android:tint="@color/black"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <!-- Tên -->
                 <TextView
                     android:id="@+id/filltencuochop"
                     android:layout_width="0dp"
@@ -119,7 +117,6 @@
                     app:layout_constraintTop_toTopOf="@id/ic_contact"
                     app:layout_constraintEnd_toStartOf="@id/ic_more" />
 
-                <!-- More -->
                 <ImageView
                     android:id="@+id/ic_more"
                     android:layout_width="20dp"
@@ -129,7 +126,7 @@
                     app:layout_constraintTop_toTopOf="@id/ic_contact"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-                <!-- Icon công ty -->
+                <!-- Công ty -->
                 <ImageView
                     android:id="@+id/ic_congty"
                     android:layout_width="20dp"
@@ -137,10 +134,9 @@
                     android:layout_marginTop="@dimen/margin_basex2"
                     android:src="@drawable/ic_congty"
                     android:tint="@color/black"
-                    app:layout_constraintTop_toBottomOf="@id/ic_contact"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_contact" />
 
-                <!-- Tên công ty -->
                 <TextView
                     android:id="@+id/fillcongty"
                     android:layout_width="wrap_content"
@@ -151,7 +147,7 @@
                     app:layout_constraintStart_toEndOf="@id/ic_congty"
                     app:layout_constraintTop_toTopOf="@id/ic_congty" />
 
-                <!-- Icon Calendar -->
+                <!-- Ngày -->
                 <ImageView
                     android:id="@+id/ic_calendar"
                     android:layout_width="20dp"
@@ -159,10 +155,9 @@
                     android:layout_marginTop="@dimen/margin_basex2"
                     android:src="@drawable/ic_calendar"
                     android:tint="@color/black"
-                    app:layout_constraintTop_toBottomOf="@id/ic_congty"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_congty" />
 
-                <!-- Ngày -->
                 <TextView
                     android:id="@+id/fillngay"
                     android:layout_width="wrap_content"
@@ -173,7 +168,7 @@
                     app:layout_constraintStart_toEndOf="@id/ic_calendar"
                     app:layout_constraintTop_toTopOf="@id/ic_calendar" />
 
-                <!-- Cuộc gọi -->
+                <!-- Call & Meeting -->
                 <ImageView
                     android:id="@+id/ic_call"
                     android:layout_width="20dp"
@@ -181,9 +176,8 @@
                     android:src="@drawable/ic_call"
                     android:tint="@color/icon_comment"
                     android:layout_marginTop="@dimen/margin_basex3"
-                    android:layout_marginStart="@dimen/margin_basex2"
-                    app:layout_constraintTop_toBottomOf="@id/ic_calendar"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_calendar" />
 
                 <TextView
                     android:id="@+id/fill_cuocgoi"
@@ -193,10 +187,8 @@
                     android:textSize="@dimen/text_medium"
                     android:layout_marginStart="@dimen/margin_basex2"
                     app:layout_constraintStart_toEndOf="@id/ic_call"
-                    app:layout_constraintTop_toTopOf="@id/ic_call"
-                    app:layout_constraintBottom_toBottomOf="@id/ic_call" />
+                    app:layout_constraintTop_toTopOf="@id/ic_call" />
 
-                <!-- Meeting -->
                 <ImageView
                     android:id="@+id/ic_meeting"
                     android:layout_width="20dp"
@@ -205,8 +197,7 @@
                     android:tint="@color/icon_comment"
                     android:layout_marginStart="@dimen/margin_basex3"
                     app:layout_constraintStart_toEndOf="@id/fill_cuocgoi"
-                    app:layout_constraintTop_toTopOf="@id/ic_call"
-                    app:layout_constraintBottom_toBottomOf="@id/ic_call" />
+                    app:layout_constraintTop_toTopOf="@id/ic_call" />
 
                 <TextView
                     android:id="@+id/fill_meeting"
@@ -216,27 +207,36 @@
                     android:textSize="@dimen/text_medium"
                     android:layout_marginStart="@dimen/margin_basex2"
                     app:layout_constraintStart_toEndOf="@id/ic_meeting"
-                    app:layout_constraintTop_toTopOf="@id/ic_meeting"
-                    app:layout_constraintBottom_toBottomOf="@id/ic_meeting" />
+                    app:layout_constraintTop_toTopOf="@id/ic_meeting" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Button Lưu cố định cuối màn hình -->
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="0dp"
+    <!-- Nút thêm -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_opportunity"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thêm người liên hệ"
-        android:backgroundTint="@color/xanhbutton"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_small"
-        android:paddingVertical="8dp"
+        android:layout_margin="24dp"
+        android:contentDescription="@string/add_opportunity"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/blue_primary"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Form nổi -->
+    <include
+        android:id="@+id/layout_opportunity_form"
+        layout="@layout/layout_opportunity_form"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

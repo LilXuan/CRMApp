@@ -27,7 +27,7 @@ public class DanhSachCaNhanActivity extends AppCompatActivity {
         cardThongTin = findViewById(R.id.cardthongtin);
         icBack = findViewById(R.id.ic_back);
         icMore = findViewById(R.id.ic_more);
-        btnAdd = findViewById(R.id.btnAdd);
+//        btnAdd = findViewById(R.id.btnAdd);
 
         icBack.setOnClickListener(v -> {
             Intent intent = new Intent(DanhSachCaNhanActivity.this, MainActivity.class);
@@ -42,12 +42,12 @@ public class DanhSachCaNhanActivity extends AppCompatActivity {
             //finish();
         });
 
-        btnAdd.setOnClickListener(v -> {
-            Intent intent = new Intent(DanhSachCaNhanActivity.this, ThongTinLienHeActivity.class);
-            startActivity(intent);
-            // Nếu muốn giữ lại màn hình danh sách, bỏ dòng finish()
-            //finish();
-        });
+//        btnAdd.setOnClickListener(v -> {
+//            Intent intent = new Intent(DanhSachCaNhanActivity.this, ThongTinLienHeActivity.class);
+//            startActivity(intent);
+//            // Nếu muốn giữ lại màn hình danh sách, bỏ dòng finish()
+//            //finish();
+//        });
 
         // Click vào back button
 //        icBack.setOnClickListener(v -> onBackPressed());
