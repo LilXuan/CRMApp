@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_action_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,7 +11,8 @@
     android:gravity="center_vertical"
     android:background="@drawable/bg_item_action_pressed"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    tools:ignore="ExtraText">
 
     <ImageView
         android:id="@+id/img_action_icon"
@@ -18,7 +20,7 @@
         android:layout_height="24dp"
         android:contentDescription="@string/app_name"
         android:background="@drawable/bg_item_action"
-        app:tint="?attr/colorOnSurface" />
+        app:tint="@null" />
 
     <TextView
         android:id="@+id/tv_action"
